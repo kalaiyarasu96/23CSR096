@@ -64,8 +64,8 @@ async function run() {
         return;
     }
 
-    const unreadNotifications = allNotifications.filter(n => n.status.toLowerCase() === 'unred');
-    unreadNotifications.sort((a, b) => compareNotifications(a, b)); 
+    const unreadNotifications = allNotifications.filter(n => n.status.toLowerCase() === 'unread');
+    unreadNotifications.sort((a, b) => compareNotifications(b, a)); 
 
     const top10 = unreadNotifications.slice(0, 10);
 
